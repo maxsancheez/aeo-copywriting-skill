@@ -6,6 +6,16 @@
 
 **Spark:** [Learn 80% of AEO in 19 Minutes (Ahrefs)](https://youtu.be/58MR03s0ev8) · **Angle:** build · **Date:** 2026-10-14
 
+## Get the skill
+
+The skill lives in [`skill/`](skill/SKILL.md): a `SKILL.md` for Claude plus the linter in `skill/scripts/`. To install it for Claude Code:
+
+```bash
+git clone https://github.com/maxsancheez/aeo-copywriting-skill /tmp/aeo-skill && mkdir -p ~/.claude/skills/aeo-copywriting && cp -r /tmp/aeo-skill/skill/* ~/.claude/skills/aeo-copywriting/
+```
+
+Then ask Claude something like "make this page AEO-ready" or "why doesn't ChatGPT mention my brand?" and it'll pick the skill up. It starts by finding your biggest gap (citation, topic, competitor or format), then maps the fan-out, writes the copy and lints it.
+
 ## The claim vs. reality
 
 The video (Sam Oh for Ahrefs) splits answer engine optimization into five pieces: how AI search works, a brand gap analysis, prompt research, getting cited, and measurement. The core idea is that one ChatGPT prompt fans out into lots of smaller searches. So you need to cover a whole topic, get your brand named on other sites, and write in a way AI can lift cleanly.
@@ -79,10 +89,10 @@ GPTBot is the most-blocked AI crawler at 5.89% of sites [10]. Cloudflare started
 
 There are two pieces: the skill (`skill/SKILL.md`) and the linter (`code/aeo_lint.py`).
 
-**The skill** walks Claude through eight steps: map the fan-out, run the AI filter on each sub-question, set up the page, write each section by the rules, draft off-site copy (listicle pitches, Reddit answers, YouTube titles), do the robots.txt check, lint, and set up measurement. It has guardrails against invented stats and astroturfing. To install it:
+**The skill** walks Claude through nine steps: find the biggest gap, map the fan-out, run the AI filter on each sub-question, set up the page, write each section by the rules, draft off-site copy (listicle pitches, Reddit answers, YouTube titles), do the robots.txt check, lint, and set up measurement. It has guardrails against invented stats and astroturfing. To install it:
 
 ```bash
-mkdir -p ~/.claude/skills/aeo-copywriting && cp -r skill/* ~/.claude/skills/aeo-copywriting/
+git clone https://github.com/maxsancheez/aeo-copywriting-skill /tmp/aeo-skill && mkdir -p ~/.claude/skills/aeo-copywriting && cp -r /tmp/aeo-skill/skill/* ~/.claude/skills/aeo-copywriting/
 ```
 
 **The linter** treats each H2/H3 as a chunk and scores it on BLUF, atomic opening, entity density, sentence length and evidence. Then it checks for a visible updated date, a list or table, and which fan-out questions no section covers. Here's a fluffy cold brew page (fictional brand) before the rewrite:

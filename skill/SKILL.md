@@ -18,13 +18,26 @@ Everything here is built on SEO, not instead of it. Ahrefs found 76% of AI Overv
 
 If something's missing, make a sensible call and say what you assumed. Don't stall.
 
+## Step 0: find the biggest gap first
+
+Before writing, check where the brand shows up in AI answers and where it doesn't. Use whatever the user has (Ahrefs Brand Radar, Semrush, Profound, or just running the prompts by hand in ChatGPT, Perplexity and Google). Look for these gaps:
+
+| Gap | What it looks like | What to write first |
+|---|---|---|
+| Citation gap | AI names the brand but cites someone else's page | A page on your site that answers that exact prompt better |
+| Topic gap | AI doesn't link the brand to topics it should own | On-site content. Refresh pages that used to rank and slipped because they got outdated: it's the fastest win |
+| Competitor gap | Competitors get recommended, the brand doesn't | Off-site copy: pitches to "best X" lists and reviews, and real Reddit answers (Step 5) |
+| Format gap | AI cites videos (or another format) the brand doesn't make | YouTube titles, descriptions and scripts (Step 5) |
+
+Pick the biggest gap and start there. You can't fix everything at once.
+
 ## Step 1: map the fan-out
 
 AI assistants don't run your prompt once. They break it into many smaller searches ("query fan-out", Google's term for how AI Mode works) and stitch the answer together. Your page has to answer the sub-questions, not just the head term.
 
 1. Write the main prompt in natural language.
 2. List 8 to 15 sub-questions it fans out into. Cover: definition, how-to, how long / how much, best / top, X vs Y, alternatives, for-whom, risks or downsides, and anything time-sensitive.
-3. Add modifiers to seeds (best, vs, review, alternative, cost, for beginners, near me) to get the commercial variants.
+3. Add modifiers to seeds (best, vs, review, alternative, cost, for beginners, near me) to get the commercial variants. If you're starting cold, generate 10 seed keywords of 1–2 words each, plus 5+ modifiers that don't share words with the seeds, based on the site type, revenue model and audience. Then expand them in a keyword tool.
 4. Save the list as `questions.txt`, one per line. The linter checks coverage against it.
 
 ## Step 2: run the AI filter
@@ -66,7 +79,7 @@ Branded web mentions had the strongest link to AI Overview visibility of anythin
 
 - **Editorial / listicles:** write a short pitch to the author of an existing "best X" list. Lead with the one fact that makes the product belong on the list, give the brand line, and offer data or a quote they can use.
 - **Reddit, Quora, forums:** answer the actual question first, in the same BLUF style. Disclose any affiliation. Only post where the answer is genuinely useful. Never write fake reviews, sock-puppet posts or undisclosed promos.
-- **YouTube:** keyword in the title and the first lines of the description, chapters (timestamps) in the description, and say the keyword out loud in the video, since the transcript gets indexed.
+- **YouTube:** aim for search hits (evergreen topics people search for every month) over viral hits that spike and die. Find them by checking which youtube.com/watch pages rank top 3 for terms in the niche. Then put the keyword in the title and the first lines of the description, add chapters (timestamps), and say the keyword out loud in the video, since the transcript gets indexed. Sponsorships and creator outreach also count as YouTube mentions.
 - **Own properties:** LinkedIn, podcast show notes, docs. Same brand line, same entities.
 
 ## Step 6: technical check (30 seconds)
